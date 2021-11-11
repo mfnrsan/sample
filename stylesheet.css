@@ -1,0 +1,277 @@
+@charset "uft-8";
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+    margin: auto;
+    width: 95%;
+}
+
+/* header layout */
+header ul{
+    display: flex;
+    background-color: grey;
+}
+header ul li{
+    list-style: none;
+    padding: 1em;
+}
+header a{
+    color: ivory;
+    text-decoration: none;
+}
+
+header .night{
+    color: grey;
+}
+
+/* line */
+.line{
+    margin: 40px 0;
+    border-bottom: solid 1px grey;
+}
+
+/* content flex */
+.flex{
+    display: flex;
+}
+
+.section1 .flex .day{
+    width: 250px;
+    padding: 1em 2em;
+    margin: 10px;
+    border: solid 1px grey;
+    border-radius: 5px;
+}
+
+/* tab layout */
+.tabbox input{
+    display: none;
+}
+.tabbox label{
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.tab{
+    color: lightgrey;
+}
+.tab:hover{
+    color: darkgrey;
+}
+input:checked+.tab{
+    color: grey;
+}
+.tabcontent{
+    display: none;
+}
+
+/* table */
+table{
+    text-align: center;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    color: ivory;
+    background-color: grey;
+    padding: 15px 0;
+    width: 100%;
+}
+footer a{
+    color: ivory;
+    text-decoration: none;
+}
+
+/* section2 tab_content */
+.section2 .tabcontent{
+    padding: 10px 20px;
+}
+#tab1:checked ~ #sec2_tab1_content{
+    display: block;
+}
+#tab2:checked ~ #sec2_tab2_content{
+    display: block;
+}
+#tab3:checked ~ #sec2_tab3_content{
+    display: block;
+}
+#tab4:checked ~ #sec2_tab4_content{
+    display: block;
+}
+
+/* section3 select */
+.selectdiv{
+    position: relative;
+    float: left;
+    min-width: 200px;
+}
+select::-ms-expand{
+    display: none;
+}
+.selectdiv:after{
+    content: '<>';
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 11px;
+    top: 18px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    position: absolute;
+}
+.selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* section4 checkbox */
+.chkbox_sec4 input[type="checkbox"]{
+    display: none;
+}
+.chkbox_sec4 label:hover{
+    color: lightgrey;
+}
+.chkbox_sec4 input[type="checkbox"]+label{
+    margin-top: 15px;
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+.chkbox_sec4 input[type="checkbox"]+label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 2px solid;
+    border-color: grey;
+    border-radius: 5px;
+}
+.chkbox_sec4 input[type="checkbox"]:checked+label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -9px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+}
+
+/* section5 radio */
+.radio_sec5 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+.radio_sec5 ul li{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.radio_sec5 ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+}
+.radio_sec5 ul li label{
+    display: block;
+    position: relative;
+    padding: 10px 0 0 30px;
+    height: 30px;
+    cursor: pointer;
+    /* -webkit-transition: all 0.25s linear; */
+}
+.radio_sec5 ul li:hover label{
+    color: lightgrey;
+}
+.radio_sec5 ul li .check{
+    /* display: block; */
+    position: absolute;
+    border: 2px solid grey;
+    border-radius: 100%;
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+.radio_sec5 ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+.radio_sec5 input[type=radio]:checked ~ .check {
+    border: 2px solid grey;
+}
+.radio_sec5 input[type=radio]:checked ~ .check::before{
+    background: grey;
+}
+.radio_sec5 input[type=radio]:checked ~ label{
+    color: grey;
+}  
+
+/* section6 */
+.section6 td{
+    padding-top: 10px;
+}
+
+/* section7 */
+.section7 ul{
+    list-style-type: none;
+    width: 500px;
+}
+.section7 ul li{
+    margin-bottom: 15px;
+}
+.section7 label{
+    margin-right: 30px;
+    width: 100px;
+    float: left;
+}
+.section7 input{
+    width: 300px;
+}
+.section7 textarea{
+    resize: vertical;
+    width: 300px;
+}
+.section7 a{
+    color: grey;
+    text-decoration: none;
+    text-align: center;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-left: 250px;
+}
