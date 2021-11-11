@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--  -->
+<!-- selecto : https://www.sejuku.net/blog/25060 -->
+<html lang="ja">
+    <head>
+        <meta charset="uft-8">
+        <title>taaaab</title>
+        <link rel="stylesheet" href="stylesheet.css">
+
+        <!-- javascript -->
+        <script>
+            // sec4 select //
+            function myfunc() {
+                var value　= document.getElementById("slct").value;
+                var target = document.getElementById("target");
+                var text = '';
+                if(value === 'sl0'){
+                    text = 'bye world';
+                }
+                else if(value === 'sl1'){
+                    text = 'bye no.1';
+                }
+                else if(value === 'sl2'){
+                    text = 'bye no.2';
+                }
+                else if(value === 'sl3'){
+                    text = 'bye no.3';
+                }
+                else if(value === 'sl4'){
+                    text = 'bye no.4';
+                }
+                else if(value === 'sl5'){
+                    text = 'bye no.5';
+                }
+                target.innerHTML = text;
+                }
+        </script>
+
+    </head>
+    
+    <body>
+        <!-- # header # -->
+        <header id="#">
+            <ul>
+                <li><a href="index.html#"    >home</a></li>
+                <li><a href="index.html#sec1">today</a></li>
+                <li><a href="index.html#sec2">sky</a></li>
+                <li><a href="index.html#sec3">select</a></li>
+                <li><a href="index.html#sec4">check</a></li>
+                <li><a href="index.html#sec5">radio</a></li>
+                <li><a href="index.html#sec6">irohauta</a></li>
+                <li><a href="index.html#sec7">contact</a></li>
+                <li><a href="index.html#sec8" class="night">goodnight</a></li>
+            </ul>
+        </header>
+
+        <h1>hello world.</h1>
+        <div class="line"></div>
+
+        <!-- # section1 # -->
+        <div id="sec1" class="section1">
+            <h2>today</h2>
+            what is today?
+            <div class="flex">
+                <div class="day">
+                    <p>today is cold.</p>
+                    <time>2020-10-07</time>
+                </div>
+                <div class="day">
+                    <p>tomorrow will be rain.</p>
+                    <time>2020-10-08</time>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section2 # -->
+        <div id="sec2" class="section2">
+            <h2>sky</h2>
+            <div class="tabbox">
+                <!-- radio button and tab name -->
+                <input type="radio" name="tab_sec2" id="tab1" checked><label for="tab1" class="tab">star</label>
+                <input type="radio" name="tab_sec2" id="tab2"        ><label for="tab2" class="tab">rain</label>
+                <input type="radio" name="tab_sec2" id="tab3"        ><label for="tab3" class="tab">bird</label>
+                <input type="radio" name="tab_sec2" id="tab4"        ><label for="tab4" class="tab">sky</label>
+
+                <!-- tab content -->
+                <div class="tabcontent" id="sec2_tab1_content">
+                    <p>that day was a meteor shower.</p>
+                </div>
+                <div class="tabcontent" id="sec2_tab2_content">
+                    <p>the rain hasn't stopped since the next day.</p>
+                </div>
+                <div class="tabcontent" id="sec2_tab3_content">
+                    <p>the bird was falling yesterday.</p>
+                </div>
+                <div class="tabcontent" id="sec2_tab4_content">
+                    <p>apparently the sky is uncomfortable.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section3 # -->
+        <div id="sec3" class="section3">
+            <h2>select</h2>
+            <label for="slct">select number</label><br />
+            <div class="selectdiv">
+                <select id="slct" size="1" onchange="myfunc()">
+                    <option value="sl0">please select</option>
+                    <option value="sl1">no.1</option>
+                    <option value="sl2">no.2</option>
+                    <option value="sl3">no.3</option>
+                    <option value="sl4">no.4</option>
+                    <option value="sl5">no.5</option>
+                </select>
+            </div>
+            <br /><br /><br /><br />
+            <p>
+                the choice here will have a big impact later on.<br />
+                ... maybe.
+            </p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section4 # -->
+        <div id="sec4" class="section4">
+            <h2>chack</h2>
+            check your favorite box<br>
+            <div class="chkbox_sec4">
+                <input id="chk1" type="checkbox"><label for="chk1">check1</label><br />
+                <input id="chk2" type="checkbox"><label for="chk2">check2</label><br />
+                <input id="chk3" type="checkbox"><label for="chk3">check3</label><br />
+                <input id="chk4" type="checkbox"><label for="chk4">check4</label><br />
+            </div>
+            <p>
+                the choice here is completely irrelevant.<br>
+                ... maybe.
+            </p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section5 # -->
+        <div id="sec5" class="section5">
+            <h2>radio</h2>
+            choose your favorite box<br>
+            <div class="radio_sec5">   
+                <ul>
+                    <li>
+                        <input id="radio1" type="radio" name="radio_5"><label for="radio1">radio1</label>
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input id="radio2" type="radio" name="radio_5"><label for="radio2">radio2</label>
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input id="radio3" type="radio" name="radio_5"><label for="radio3">radio3</label>
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input id="radio4" type="radio" name="radio_5"><label for="radio4">radio4</label>
+                        <div class="check"></div>
+                    </li>
+                </ul>     
+            </div>
+            <p>
+                the choice here is completely irrelevant.<br>
+                ... maybe.
+            </p>
+
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section6 # -->
+        <div id="sec6" class="section6">
+            <h2>irohauta</h2>
+            <table>
+                <tr><td>i</td><td>ro</td><td>ha</td><td>ni</td><td>ho</td><td>he</td><td>to</td><td></td><td>chi</td><td>ri</td><td>nu</td><td>ru</td><td>wo</td></tr>
+                <tr><td>wa</td><td>ka</td><td>yo</td><td>ta</td><td>re</td><td>so</td><td></td><td></td><td>tsu</td><td>re</td><td>na</td><td>ra</td><td>mu</td></tr>
+                <tr><td>u</td><td>yi</td><td>no</td><td>o</td><td>ku</td><td>ya</td><td>ma</td><td></td><td>ke</td><td>fu</td><td>ko</td><td>e</td><td>te</td></tr>
+                <tr><td>a</td><td>sa</td><td>ki</td><td>yu</td><td>me</td><td>mi</td><td>shi</td><td></td><td>ye</td><td>hi</td><td>mo</td><td>se</td><td>su</td></tr>
+            </table>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section7 # -->
+        <div id="sec7" class="section7">
+            <h2>contact</h2>
+            <ul>
+                <li>
+                    <label for="name">name</label>
+                    <input type="text"     id="name"   placeholder="ex. kaya kikuchi">
+                </li>
+                <li>
+                    <label for="phone">phone</label>
+                    <input type="text"     id="phone"   placeholder="ex. 070-xxxx-xxxx">
+                </li>
+                <li>
+                    <label for="mail">e-mail</label>
+                    <input type="text"     id="mail"   placeholder="ex. mailaddr@mail.com">
+                </li>
+                <li>
+                    <label for="pass">password</label>
+                    <input type="password" id="name"   placeholder="********">
+                </li>
+                <li>
+                    <label for="msg">message</label>
+                    <textarea id="msg"></textarea>
+                </li>
+            </ul>
+            <a href="index.html#">submit</a>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- # section8 # -->
+        <div id="sec8" class="section8">
+            <h1>good night world.</h1>
+            
+            <!-- # display result # -->
+            <p id="target"></p>
+        </div>
+
+        
+        <!-- # footer # -->
+        <footer>
+            (c)2021 mfzemon<br>
+            <a href="index.html#">to top</a>
+        </footer>
+
+    </body>
+</html>
